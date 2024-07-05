@@ -156,7 +156,7 @@ function Game() {
       // ref={refContainer}
       className='h-4/5 w-full p-5 relative'>
         <div onClick={incrementScore}
-          className={`bg-[url('/public/Images/zombieimgNew.png')] bg-contain bg-no-repeat w-36 h-64 absolute ${(!gameon || paused) ? `hidden`: `block`}`}
+          className={`bg-[url('/Images/zombieimgNew.png')] bg-contain bg-no-repeat w-36 h-64 absolute ${(!gameon || paused) ? `hidden`: `block`}`}
           style={{top: topPos, left: leftPos}}
         // ref={refContainer}
         ></div> 
