@@ -28,9 +28,9 @@ function Theme() {
 
     console.log(theme_id)
     const images = [
-        { id: 0, src: "/src/Images/Theme1.jpg", alt: "Theme1" },
-        { id: 1, src: "/src/Images/Theme2.jpg", alt: "Theme2" },
-        { id: 2, src: "/src/Images/Theme2.jpg", alt: "Theme2" }
+        { id: 0, src: "/public/Images/Theme1.jpg", alt: "Theme1" },
+        { id: 1, src: "/public/Images/Theme2.jpg", alt: "Theme2" },
+        { id: 2, src: "/public/Images/Theme2.jpg", alt: "Theme2" }
     ];
 
     // const [BgImg, setBgImg] = useState(images[theme_id].src)

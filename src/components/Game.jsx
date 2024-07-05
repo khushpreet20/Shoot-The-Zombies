@@ -106,7 +106,7 @@ function Game() {
   }
 
   const Replay = (e) => {
-    setTime(5);
+    setTime(10);
     setGameon(true);
     setScore(0);
     setTimer(3);
@@ -156,7 +156,7 @@ function Game() {
       // ref={refContainer}
       className='h-4/5 w-full p-5 relative'>
         <div onClick={incrementScore}
-          className={`bg-[url('/src/Images/zombieimgNew.png')] bg-contain bg-no-repeat w-36 h-64 absolute ${(!gameon || paused) ? `hidden`: `block`}`}
+          className={`bg-[url('/public/Images/zombieimgNew.png')] bg-contain bg-no-repeat w-36 h-64 absolute ${(!gameon || paused) ? `hidden`: `block`}`}
           style={{top: topPos, left: leftPos}}
         // ref={refContainer}
         ></div> 
