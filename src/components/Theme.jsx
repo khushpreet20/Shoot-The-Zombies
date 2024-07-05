@@ -49,12 +49,22 @@ function Theme() {
                 className = 'text-5xl font-bold p-3' type="button"> - </button>
                 <div className='flex gap-4 px-4 w-full justify-center items-center'>
                     {images.map((image) => (
-                        <img
+                        <div
                         key={image.id}
                         id={image.id}
-                        src={image.src}
-                        alt={image.alt}
-                        className={`w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}/>
+                        // src={image.src}
+                        // alt={image.alt}
+                        className={`bg-[url(${image.src})] bg-contain bg-no-repeat w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}
+                        // style={{backgroundImage: `${new URL(image.src)}`}}
+                        >
+                            {/* {console.log(image.src)} */}
+                        </div>
+                        // <img
+                        // key={image.id}
+                        // id={image.id}
+                        // src={image.src}
+                        // alt={image.alt}
+                        // className={`w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}/>
                     ))}
                 </div>
                 <button onClick={() => {
