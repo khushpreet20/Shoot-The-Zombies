@@ -2,6 +2,9 @@ import React from 'react'
 import { useState, useContext } from 'react';
 import { ThemeContext } from '../context/theme';
 import { Link } from 'react-router-dom';
+import Theme1 from "/Images/Theme1.jpg"
+import Theme2 from "/Images/Theme2.jpg"
+import Theme3 from "/Images/Theme2.jpg"
 
 function Theme() {
     const [theme_id, setThemeId] = useState(0);
@@ -28,9 +31,12 @@ function Theme() {
 
     console.log(theme_id)
     const images = [
-        { id: 0, src: "/Images/Theme1.jpg", alt: "Theme1" },
-        { id: 1, src: "/Images/Theme2.jpg", alt: "Theme2" },
-        { id: 2, src: "/Images/Theme2.jpg", alt: "Theme2" }
+        // { id: 0, src: "/Images/Theme1.jpg", alt: "Theme1" },
+        // { id: 1, src: "/Images/Theme2.jpg", alt: "Theme2" },
+        // { id: 2, src: "/Images/Theme2.jpg", alt: "Theme2" }
+        { id: 0, src: Theme1, alt: "Theme1" },
+        { id: 1, src: Theme2, alt: "Theme2" },
+        { id: 2, src: Theme3, alt: "Theme2" }
     ];
 
     // const [BgImg, setBgImg] = useState(images[theme_id].src)
@@ -49,22 +55,22 @@ function Theme() {
                 className = 'text-5xl font-bold p-3' type="button"> - </button>
                 <div className='flex gap-4 px-4 w-full justify-center items-center'>
                     {images.map((image) => (
-                        <div
-                        key={image.id}
-                        id={image.id}
-                        // src={image.src}
-                        // alt={image.alt}
-                        className={`bg-[url(${image.src})] bg-contain bg-no-repeat w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}
-                        // style={{backgroundImage: `${new URL(image.src)}`}}
-                        >
-                            {/* {console.log(image.src)} */}
-                        </div>
-                        // <img
+                        // <div
                         // key={image.id}
                         // id={image.id}
-                        // src={image.src}
-                        // alt={image.alt}
-                        // className={`w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}/>
+                        // // src={image.src}
+                        // // alt={image.alt}
+                        // className={`bg-[url(${image.src})] bg-contain bg-no-repeat w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}
+                        // // style={{backgroundImage: `${new URL(image.src)}`}}
+                        // >
+                        //     {/* {console.log(image.src)} */}
+                        // </div>
+                        <img
+                        key={image.id}
+                        id={image.id}
+                        src={image.src}
+                        alt={image.alt}
+                        className={`w-1/3 h-4/5 border-4 ${theme_id === image.id ? 'border-white' : 'border-none'}`}/>
                     ))}
                 </div>
                 <button onClick={() => {
